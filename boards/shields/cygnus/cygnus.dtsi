@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <cygnus-layout.dtsi>
+#include "cygnus_layout.dtsi"
 
 / {
     chosen {
