@@ -2,8 +2,8 @@
   "id": "cygnus",
   "name": "Cygnus",
   "layouts": {
-    "default_transform": {
-      "name": "default_transform",
+    "foostan_corne_5col_layout": {
+      "name": "foostan_corne_5col_layout",
       "layout": [
         { "x": 0.0, "y": 0.37 },
         { "x": 1.0, "y": 0.12 },
