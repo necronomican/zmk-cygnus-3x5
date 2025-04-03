@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    default_transform: keymap_transform_0 {
+    cygnus_layout: cygnus_layout35 {
         compatible = "zmk,physical-layout";
         display-name = "default_transform";
 
