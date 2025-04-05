@@ -34,7 +34,9 @@
 
 
 &foostan_corne_5col_layout {
+    kscan = <&kscan0>;
     transform = <&five_col_transform>;
+    
 };
 
 / {
