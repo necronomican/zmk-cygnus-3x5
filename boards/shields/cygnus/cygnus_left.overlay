@@ -1,9 +1,5 @@
 #include "cygnus.dtsi" // Notice that the main dtsi files are included in the overlay.
 
-&foostan_corne_5col_layout { // The matrix transform for this board is 5 columns over because the left half is 5 columns wide according to the matrix.
-    col-offset = <5>;
-};
-
 &kscan0 {
 
     col-gpios
