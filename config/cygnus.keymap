@@ -76,6 +76,21 @@
         };
     };
 
+    behaviors {
+        modtap_behave: modtap_behave {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MODTAP_BEHAVE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <50>;
+            hold-trigger-key-positions = <12 17>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -87,10 +102,10 @@
             //              | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q  &kp W           &kp E        &kp R            &kp T           &kp Y            &kp U        &kp I        &kp O            &kp P
-&kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LGUI F       &kp G           &kp H            &mt RGUI J   &mt RCTRL K  &mt RIGHT_ALT L  &kp SEMI
-&kp Z  &kp X           &kp C        &kp V            &kp B           &kp N            &kp M        &kp COMMA    &kp DOT          &kp FSLH
-                       &tog 3       &lt 2 BACKSPACE  &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &lt 1 SPACE  &lt 5 SQT
+&kp Q  &kp W                      &kp E                   &kp R                  &kp T           &kp Y            &kp U                  &kp I                   &kp O                       &kp P
+&kp A  &modtap_behave LEFT_ALT S  &modtap_behave LCTRL D  &modtap_behave LGUI F  &kp G           &kp H            &modtap_behave RGUI J  &modtap_behave RCTRL K  &modtap_behave RIGHT_ALT L  &kp SEMI
+&kp Z  &kp X                      &kp C                   &kp V                  &kp B           &kp N            &kp M                  &kp COMMA               &kp DOT                     &kp FSLH
+                                  &tog 3                  &lt 2 BACKSPACE        &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &lt 1 SPACE            &lt 5 SQT
             >;
         };
 
