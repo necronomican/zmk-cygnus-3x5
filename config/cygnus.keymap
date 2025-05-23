@@ -60,14 +60,14 @@
             //              | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y    &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D     &kp F  &kp G      &kp H    &kp J  &kp K      &kp L    &kp SEMI
-&kp Z  &kp X  &kp C     &kp V  &kp B      &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH
-              &kp LGUI  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RALT
+&kp Q  &kp W           &kp E        &kp R            &kp T           &kp Y            &kp U        &kp I        &kp O            &kp P
+&kp A  &mt LEFT_ALT S  &mt LCTRL D  &mt LGUI F       &kp G           &kp H            &mt RGUI J   &mt RCTRL K  &mt RIGHT_ALT L  &kp SEMI
+&kp Z  &kp X           &kp C        &kp V            &kp B           &kp N            &kp M        &kp COMMA    &kp DOT          &kp FSLH
+                       &tog 3       &lt 1 BACKSPACE  &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &lt 2 SPACE  &kp SQT
             >;
         };
 
-        lower_layer {
+        num_layer {
             // -----------------------------------------------------------------------------------------
             //  |  TAB  |  2  |  3  |  4  |  5  |   |  9  |  8  |  7  |  0  | BKSP |
             //  | CTRL  |     |     |     | BT1 |   |  6  |  5  |  4  |     |      |
@@ -78,11 +78,11 @@
 &kp N1     &kp N2        &kp N3        &kp N4        &kp N5        &kp N7        &kp N8  &kp N9        &kp N0  &kp BSPC
 &kp LCTRL  &trans        &trans        &trans        &bt BT_SEL 0  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &trans  &trans
 &kp LSHFT  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &trans  &trans
-                         &bt BT_CLR    &trans        &kp SPACE     &kp RET       &trans  &kp RALT
+                         &bt BT_CLR    &trans        &trans        &trans        &trans  &kp RALT
             >;
         };
 
-        raise_layer {
+        sym_layer {
             // -----------------------------------------------------------------------------------------
             // |  !   |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
             // |  `   |     |     |     |     |     |  -  |  =  |  [  |  ]  |  \  |
@@ -94,6 +94,15 @@
 &kp GRAVE  &trans  &trans    &trans    &trans     &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH
 &kp TILDE  &trans  &trans    &trans    &trans     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE
                    &kp LGUI  &trans    &kp SPACE  &kp RET    &trans     &kp RALT
+            >;
+        };
+
+        prog_sym {
+            bindings = <
+&kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(DLLR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans         &kp MINUS  &kp EQUAL  &kp BSLH
+&kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(LT)    &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(QMARK)  &kp DEL    &trans     &kp SEMI
+&kp LS(AMPS)  &kp LS(STAR)   &kp GRAVE      &trans        &kp LBKT      &kp RBKT      &trans         &kp COMMA  &kp DOT    &kp FSLH
+                             &trans         &trans        &trans        &trans        &trans         &trans
             >;
         };
     };
